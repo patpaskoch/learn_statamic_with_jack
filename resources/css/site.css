@@ -33,7 +33,7 @@
 
 .content {
     p {
-        @apply text-lg mb-8 text-gray-900;
+        @apply text-lg mb-8 text-gray-200;
     }
 
     h2, h3, h4 {

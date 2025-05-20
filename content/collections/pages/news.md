@@ -1,10 +1,10 @@
 ---
-id: 8633faee-ed3c-4826-a82f-48edf273165a
+id: b9b07ca5-edd1-431b-995b-cd7a33bf4b78
 blueprint: page
-title: About
+title: News
 author: 58d89660-2b43-407b-9099-59f0f8dc2f0d
-template: default
+template: posts/index
 updated_by: 58d89660-2b43-407b-9099-59f0f8dc2f0d
-updated_at: 1746456148
+updated_at: 1747493302
 ---
-About Page
+Hello World

@@ -1,0 +1,61 @@
+title: 'News Article'
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: featuredimage
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: featuredImage
+          -
+            handle: article_content
+            field:
+              reading_time: true
+              remove_empty_nodes: false
+              type: bard
+              display: 'Article Content'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required

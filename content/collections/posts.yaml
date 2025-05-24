@@ -2,6 +2,8 @@ title: Posts
 template: default
 layout: layout
 mount: b9b07ca5-edd1-431b-995b-cd7a33bf4b78
+taxonomies:
+  - tags
 revisions: false
 route: '{mount}/{slug}'
 date: true

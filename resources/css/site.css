@@ -75,3 +75,18 @@
         }
     }
 }
+
+
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0; /* Für die Animation der Höhe */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, max-height 0.3s ease-in-out;
+    overflow: hidden; /* Verhindert, dass Inhalte sichtbar sind, wenn max-height 0 ist */
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    max-height: 500px; /* Oder eine ausreichend große Höhe für den Inhalt */
+}

@@ -9,6 +9,3 @@ preferences:
     -
       name: Dashboard
       url: dashboard
-  collections:
-    pages:
-      after_save: continue_editing

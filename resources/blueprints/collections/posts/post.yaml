@@ -33,6 +33,57 @@ tabs:
               remove_empty_nodes: false
               type: bard
               display: 'Post Content'
+              sortable: false
+              sets:
+                related_posts:
+                  display: 'Related Posts'
+                  sets:
+                    related_posts:
+                      display: 'Related Posts'
+                      fields:
+                        -
+                          handle: entries_field
+                          field:
+                            mode: select
+                            type: entries
+                            display: 'Entries Field'
+                quote:
+                  display: Quote
+                  sets:
+                    quote:
+                      display: Quote
+                      fields:
+                        -
+                          handle: quote
+                          field:
+                            buttons:
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - removeformat
+                              - quote
+                            remove_empty_nodes: false
+                            type: bard
+                            display: Quote
+                        -
+                          handle: author
+                          field:
+                            type: text
+                            display: Author
+                embed:
+                  display: Embed
+                  sets:
+                    embed:
+                      display: Embed
+                      fields:
+                        -
+                          handle: embed_template
+                          field:
+                            folder: partials
+                            type: template
+                            display: 'embed template'
+                            hide_partials: false
           -
             handle: featured_image
             field:
@@ -59,3 +110,11 @@ tabs:
               default: now
               validate:
                 - required
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select

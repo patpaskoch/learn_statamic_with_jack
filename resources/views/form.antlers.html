@@ -4,9 +4,9 @@
     </header>
     <section class="max-w-xl mx-auto mt-12 content article">
         {{ form:contact js="alpine" }}
-            {{# {{ if success }} #}}
+            {{ if success }}
                 <div class="text-yellow-500 font-bold mb-4 text-2xl">Thanks! Someone will be in touch soon.</div>
-            {{# {{ /if }} #}}
+            {{ /if }}
             <div class="flex flex-col pt-16 pb-4 gap-4">
                 {{ fields }}
                     <template x-if="{{ show_field }}">

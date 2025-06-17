@@ -19,5 +19,22 @@
 
     <section class="max-w-3xl mx-auto mt-12 content article">
         {{ post_content }}
+            {{ if type == "text" }}
+                {{ text }}
+            {{ elseif type == "quote" }}
+                <div class="quote-block">
+                    &ldquo;{{quote}}&rdquo;
+                    <div class="italic mt-2">{{ author}}</div>
+                </div>
+            {{ elseif type == "related_posts"}}
+                test
+                {{ entries_field}}
+                    <a href="{{ url }}" class="related-block"><strong>Related: </strong>{{ title }}</a>
+                {{ /entries_field}}
+            {{ elseif type == "embed"}}
+                {{ partial :src="embed_template"}}
+            {{/if}}
+
+        {{ /post_content }}
     </section>
 </article>
